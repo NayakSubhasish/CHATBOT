@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    position: relative;
+  }
+}
+
+/* Geometric background pattern */
+.geometric-pattern {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 1px 1px, hsl(0, 0%, 40%) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 9%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 40%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 50%);
+}
+
+/* Prose styles for markdown content */
+.prose {
+  @apply text-foreground;
+}
+
+.prose strong {
+  @apply font-semibold text-foreground;
+}
+
+.prose code {
+  @apply rounded bg-secondary px-1.5 py-0.5 text-sm font-mono;
+}
+
+.prose pre {
+  @apply rounded-lg border border-border bg-secondary/50 p-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
