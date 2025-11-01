@@ -148,33 +148,24 @@ Press `⌘K` (or `Ctrl+K` on Windows/Linux) to access:
 
 ## 🌐 Deployment to Vercel
 
-### Step 1: Push to GitHub
+The code is already pushed to GitHub: https://github.com/NayakSubhasish/CHATBOT.git
 
-```bash
-git init
-git add .
-git commit -m "Initial commit: NeuralChat AI Application"
-git branch -M main
-git remote add origin https://github.com/NayakSubhasish/CHATBOT.git
-git push -u origin main
-```
+### Quick Deploy Steps:
 
-### Step 2: Deploy to Vercel
+1. **Visit Vercel**: Go to [https://vercel.com](https://vercel.com)
+2. **Sign In**: Use your GitHub account
+3. **Import Project**: 
+   - Click "Add New..." → "Project"
+   - Select repository: `NayakSubhasish/CHATBOT`
+   - Click "Import"
+4. **Add Environment Variable**:
+   - Add `GEMINI_API_KEY` with your Google Gemini API key
+   - Get your key from [Google AI Studio](https://aistudio.google.com/)
+5. **Deploy**: Click "Deploy" and wait for build to complete
 
-1. Go to [Vercel](https://vercel.com)
-2. Sign in with your GitHub account
-3. Click "Add New Project"
-4. Import your repository: `NayakSubhasish/CHATBOT`
-5. Configure environment variables:
-   - Add `GEMINI_API_KEY` with your API key
-6. Click "Deploy"
+Your app will be live at `https://your-project.vercel.app`!
 
-### Environment Variables
-
-For Vercel deployment, add this environment variable:
-- `GEMINI_API_KEY`: Your Google Gemini API key
-
-The app will be automatically deployed and you'll get a live URL!
+**Note**: See `VERCEL_DEPLOY.md` for detailed deployment instructions and troubleshooting.
 
 ## 🔧 Configuration
 
